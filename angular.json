@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "springboot-database-h2-frontend-angular": {
@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "springboot-database-h2-frontend-angular"
+    }
+  },
+  "defaultProject": "springboot-database-h2-frontend-angular",
+  "cli": {
+    "analytics": false
+  }
 }
