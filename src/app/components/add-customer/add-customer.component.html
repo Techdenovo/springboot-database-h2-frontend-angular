@@ -1,1 +1,20 @@
-<p>add-customer works!</p>
+<div style="width: 400px; margin: auto;">
+    <div class="submit-form">
+        <div *ngIf="!submitted">
+            <div class="form-group">
+                <label for="title">Fisrt Name</label>
+                <input type="text" class="form-control" id="first-name" required [(ngModel)]="customer.firstName"
+                    name="first-name" />
+            </div>
+            <div class="form-group">
+                <label for="description">Last Name</label>
+                <input class="form-control" id="last-name" required [(ngModel)]="customer.lastName" name="last-name" />
+            </div>
+            <button (click)="saveCustomer()" class="btn btn-sucess">Submit</button>
+        </div>
+        <div *ngIf="submitted">
+            <h4>You submitted successfully!</h4>
+            <button class="btn btn-success" (click)="newCustomer()">Add</button>
+        </div>
+    </div>
+</div>

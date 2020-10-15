@@ -27,7 +27,24 @@ export class AddCustomerComponent implements OnInit {
       mobileNo: this.customer.mobileNo
     };
 
+    this.customerService.create(data).subscribe(
+      Response => {
+        console.log(Response);
+        this.submitted = true;
 
+      },
+      error => {
+        console.log(error);
 
+      }
+    );
+  }
+  newCustomer(): void {
+    this.submitted = false;
+    this.customer = {
+      firstName: '',
+      lastName: '',
+      mobileNo: ''
+    };
   }
 }
